@@ -1,7 +1,7 @@
 title: isixline
 author: isixline
 email: isixline@qq.com
-show_excerpts: true
+show_excerpts: false
 
 sass:
   sass_dir: _sass
