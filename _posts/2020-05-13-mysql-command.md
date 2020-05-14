@@ -43,22 +43,14 @@ mysql -h localhost -u root -p db_yves < D:\db_yves.sql
 
 ### 其他命令
 - 显示服务器状态  
-    SHOW STATUS
+    SHOW STATUS;
 - 显示创建数据库语句  
-    SHOW CREATE DATABASE
+    SHOW CREATE DATABASE;
 - 显示创建表语句
-    SHOW CREATE TABLE
+    SHOW CREATE TABLE;
 - 显示授予用户的安全权限
-    SHOW GRANTS
+    SHOW GRANTS;
 - 显示服务器错误信息
-    SHOW ERRORS
+    SHOW ERRORS;
 - 显示服务器警告信息
-    SHOW ERRORS
-
-
-
-
-
-
-
-
+    SHOW ERRORS;
