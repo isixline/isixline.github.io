@@ -23,7 +23,7 @@ task hello << {
 }
 ```
 
-执行 task hello。（ -q. 代表 quiet 模式. 它不会生成 Gradle 的日志信息 (log messages), 所以用户只能看到 tasks 的输出. 它使得的输出更加清晰.）
+执行 task hello。
 
 ## 执行Task
 
@@ -58,3 +58,6 @@ gradle.taskGraph.whenReady {taskGraph ->
     }
 }
 ```
+
+PS：
+-q. 代表 quiet 模式. 它不会生成 Gradle 的日志信息 (log messages), 所以用户只能看到 tasks 的输出. 它使得的输出更加清晰.
