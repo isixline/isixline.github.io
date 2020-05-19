@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "现代操作系统（01）"
-description: 引论
 categories:  读书笔记 引论
 ---
 

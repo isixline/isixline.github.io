@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "100-Days-Of-ML-Code（01）"
-description: 准备工作
 categories:  机器学习 python
 ---
 
