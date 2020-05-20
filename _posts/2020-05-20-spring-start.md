@@ -1,48 +1,40 @@
 ---
 layout: post
-title: "spring boot 起步"
-categories: springBoot
+title:  "spring 起步"
+categories:  spring
 ---
 
-## 设计目的
+## 什么是spring？
+Spring的核心是一个容器，通常称为 Spring 应用程序上下文，用于创建和管理应用程序组件。
+#### bean
+bean是一个由Spring IoC容器实例化、组装和管理的对象。  
+bean在Spring应用程序上下文中连接在一起以构成一个完整的应用程序。  
+将bean连接在一起的行为是基于一种称为依赖注入（DI）的模式。容器创建并维护所有的bean，并将其注入需要它们的bean中。
+#### 注册bean
+```
+@Configuration
+public class ServiceConfiguration {
+    @Bean
+    public InventoryService inventoryService() {
+        return new InventoryService();
+    }
+    
+    @Bean
+    public ProductService productService() {
+        return new ProductService(inventoryService());
+    }
+}
+```
+@Configuration注释向Spring表明这是一个配置类，它将为Spring应用程序上下文提供beans。   
+配置的类方法带有@Bean注释，指示它们返回的对象应作为beans添加到应用程序上下文中。  
+#### 自动配置
+即自动装配和组件扫描。
+- 组件扫描，Spring可以自动从应用程序的类路径中发现组件，并将其创建为Spring应用程序上下文中的bean。
+- 自动装配，Spring 会自动将组件与它们依赖的其他bean一起注入。
 
+## spring boot
 用来简化新 Spring 应用的初始搭建以及开发过程。  
 开箱即用，提供各种默认配置来简化项目配置。
-
-## 新建项目
-#### https://start.spring.io/
-#### 添加gradle依赖
-gradle.build文件
-```
-plugins {
-	id 'org.springframework.boot' version '2.3.0.RELEASE'
-	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
-	id 'java'
-}
-
-group = 'com.example'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
-
-repositories {
-	mavenCentral()
-}
-
-dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	testImplementation('org.springframework.boot:spring-boot-starter-test') {
-		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-	}
-}
-
-test {
-	useJUnitPlatform()
-}
-
-```
-- spring-boot-starter ：核心模块，包括自动配置支持、日志和 YAML（spring-boot-starter-web 自动依赖了 spring-boot-starter）
-- spring-boot-starter-test ：测试模块，包括 JUnit、Hamcrest、Mockito
 
 ## 基本结构
 - src/main/java 程序开发以及主程序入口
@@ -64,7 +56,7 @@ test {
 #### main()
 main()方法使用Spring Boot的SpringApplication.run()方法来启动应用程序。
 
-#### 创建一个Controller
+## 创建一个Controller
 ```
 @RestController
 public class HelloController {
@@ -83,6 +75,7 @@ public class HelloController {
 - value，路由参数名
 - defaultValue，默认值
 
+
 ## 执行
 #### 执行main()
 执行标记有@SpringBootApplication注解的类中的main()
@@ -93,23 +86,3 @@ public class HelloController {
     ```
     java -jar build/libs/demo-0.0.1-SNAPSHOT.jar
     ```
-
-## 热部署
-
-在 build.gradle 的 dependencies 中加入
-
-```
-developmentOnly 'org.springframework.boot:spring-boot-devtools'
-```
-
-#### 配置idea
-###### 设置自动编译
-command+shift+alt+/ 
-![image](/assets/images/spring-boot-start-1.png)
-选中Registry...
-勾中  
-![image](/assets/images/spring-boot-start-2.png)
-###### 设置自动build
-preferences -> Compile -> Build project automatically -> 选中
-
-
