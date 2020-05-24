@@ -20,6 +20,11 @@ Spring 核心框架是 Spring 领域中其他一切的基础。它提供了核�
 ## Spring Data
 将应用程序的数据存储库抽象为简单的 Java 接口，同时当定义方法用于如何驱动数据进行存储和检索的问题时，对方法使用了命名约定。
 能够处理几种不同类型的数据库，包括关系型（JPA）、文档型（Mongo）、图型（Neo4j）等。
+- Spring Data JPA - 针对关系数据库的持久化
+- Spring Data Mongo - 针对 Mongo 文档数据库的持久化
+- Spring Data Neo4j - 针对 Neo4j 图形数据库的持久化
+- Spring Data Redis - 针对 Redis 键值存储的持久化
+- Spring Data Cassandra - 针对 Cassandra 数据库的持久化
 
 ## Spring Security
 解决了广泛的应用程序安全性需求，包括身份验证、授权和 API 安全性。
