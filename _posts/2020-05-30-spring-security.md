@@ -37,6 +37,7 @@ Spring Security 为配置用户存储提供了几个选项：
 - 定制用户详细信息服务
 ps:
 在手动测试安全性时，将浏览器设置为 private 或 incognito 模式是很有用的。这将确保每次打开私人/隐身窗口时都有一个新的会话。必须每次都登录到应用程序，在安全性方面所做的任何更改都将被应用，并且旧 session 的任何残余都不会阻止你查看你的更改。
+
 ## 内存用户存储
 假设只有少数几个用户，这些用户都不可能改变。
 ```
@@ -51,6 +52,7 @@ ps:
 ```
 内存中的用户存储应用于测试或非常简单的应用程序时非常方便，但是它不允许对用户进行简单的编辑。  
 如果需要添加、删除或更改用户，则必须进行必要的更改，然后重新构建、部署应用程序。
+
 ## 基于 JDBC 的用户存储
 #### 默认配置
 ```
@@ -134,3 +136,152 @@ public interface PasswordEncoder {
 }
 ```
 无论使用哪种密码编码器，数据库中的密码永远不会被解码。用户在登录时输入的密码使用相同的算法进行编码，然后将其与数据库中编码的密码进行比较。比较是在 PasswordEncoder 的 matches() 方法中执行的。
+
+## 自定义用户身份验证
+#### 定义User
+```
+@Entity
+@Data
+@NoArgsConstructor(access=AccessLevel.PRIVATE, force=true)
+@RequiredArgsConstructor
+public class User implements UserDetails {
+    private static final long serialVersionUID = 1L;
+    
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private Long id;
+    
+    private final String username;
+    private final String password;
+    private final String fullname;
+    private final String street;
+    private final String city;
+    private final String state;
+    private final String zip;
+    private final String phoneNumber;
+    
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return Arrays.asList(new SimpleGrantedAuthority("ROLE_USER"));
+    }
+    
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+    
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+    
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+    
+    @Override
+    public boolean isEnabled() {
+        return true;
+    }
+}
+```
+UserDetails 的实现将向框架提供一些基本的用户信息，比如授予用户什么权限以及用户的帐户是否启用。
+- getAuthorities() 方法应该返回授予用户的权限集合。
+- 各种 isXXXexpired() 方法返回一个布尔值，指示用户的帐户是否已启用或过期。
+#### 定义存储库接口
+```
+public interface UserRepository extends CrudRepository<User, Long> {
+    User findByUsername(String username);
+}
+```
+#### 定义Service
+```
+@Service
+public class UserRepositoryUserDetailsService implements UserDetailsService {
+    
+    private UserRepository userRepo;
+    
+    @Autowired
+    public UserRepositoryUserDetailsService(UserRepository userRepo) {
+        this.userRepo = userRepo;
+    }
+    
+    @Override
+    public UserDetails loadUserByUsername(String username)
+        throws UsernameNotFoundException {
+        User user = userRepo.findByUsername(username);
+        if (user != null) {
+            return user;
+        }
+    
+        throw new UsernameNotFoundException("User '" + username + "' not found");
+    }
+}
+```
+#### 定义SecurityConfig
+```
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Autowired
+    private UserDetailsService userDetailsService;
+
+    @Bean
+    public PasswordEncoder encoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(userDetailsService)
+                .passwordEncoder(encoder());
+
+    }
+}
+
+```
+
+## 保护 web 请求
+#### 保护请求
+```
+@Override
+protected void configure(HttpSecurity http) throws Exception {
+    http
+        .authorizeRequests()
+            .antMatchers("/design", "/orders")
+                .access("hasRole('ROLE_USER')")
+            .antMatchers(“/”, "/**").access("permitAll")
+}
+```
+指定两个安全规则：
+- 对于 /design 和 /orders 的请求应该是授予 ROLE_USER 权限的用户的请求。
+- 所有的请求都应该被允许给所有的用户。
+#### 用户登录界面
+```
+@Override
+protected void configure(HttpSecurity http) throws Exception {
+    http
+        .authorizeRequests()
+            .antMatchers("/design", "/orders")
+                .access("hasRole('ROLE_USER')")
+            .antMatchers(“/”, "/**").access("permitAll")
+        
+        .and()
+            .formLogin()
+            .loginPage("/login");
+}
+```
+and() 方法表示已经完成了授权配置，并准备应用一些额外的 HTTP 配置。
+连接之后，调用 formLogin() 开始配置自定义登录表单。
+```
+@Override
+public void addViewControllers(ViewControllerRegistry registry) {
+    registry.addViewController("/").setViewName("home");
+    registry.addViewController("/login");
+}
+```
+在WebConfig中的 addViewControllers() 方法在将 “/” 映射到主控制器的视图控制器旁边设置登录页面视图控制器
+
+
