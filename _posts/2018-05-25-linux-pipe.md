@@ -11,7 +11,7 @@
 过滤器：能够从标准输入读取文本，并向标准输出写入文本的程序。
 
 ```
-ls -l afile bfile 2>&1 | sort
+ls -l a-file b-file 2>&1 | sort
 ```
 
 ls 命令的标准输出和标准错误都发送给 sort 命令。

@@ -33,7 +33,7 @@ cat -nbs name address phone
 待分割文件名后可跟指定新文件名（默认为 x）
 
 ```
-split -d -a 3 -l 50 file splitfile
+split -d -a 3 -l 50 file split-file
 ```
 
 ## 反转文本行的顺序：tac
@@ -66,7 +66,7 @@ split -d -a 3 -l 50 file splitfile
 
 从标准输入读取数据，删除指定的数据列，然后将剩余数据写入标准输出
 
-colrm startcol endcol （列的编号从 1 开始）
+colrm start-col end-col （列的编号从 1 开始）
 
 ```
 colrm 3 5
