@@ -4,5 +4,7 @@ db.json
 *.log
 node_modules/
 public/
-.deploy*/
 .idea/
+.deploy*/
+unuse/
+readme-private.md
