@@ -1,3 +1,8 @@
+---
+title: 基础环境配置
+date: 2021-06-20 00:00
+---
+
 ## 安装Homebrew 
 https://brew.sh/index_zh-cn
 
