@@ -1,3 +1,10 @@
+---
+title: 阿里云人机校验
+date: 2021-05-29 00:00
+tags:
+    - 第三方集成
+---
+
 ## 阿里云人机校验（滑动校验）
 [官方文档](https://help.aliyun.com/document_detail/121893.html?spm=5176.2020520162.0.dexternal.73285fb0WkhLIZ)
 
@@ -8,9 +15,11 @@
 
 ### 配置
 #### 创建AccessKey
-访问密钥AccessKey（AK）相当于登录密码，只是使用场景不同。AccessKey用于程序方式调用云服务API，而登录密码用于登录控制台。
-AccessKey ID用于标识用户。
-AccessKey Secret是用来验证用户的密钥。AccessKey Secret必须保密。
+访问密钥AccessKey（AK）相当于登录密码，只是使用场景不同。
+
+AccessKey用于程序方式调用云服务API，而登录密码用于登录控制台。
+- AccessKey ID用于标识用户。
+- AccessKey Secret是用来验证用户的密钥。AccessKey Secret必须保密。
 
 #### 添加captcha配置
 - 配置名称（后期可修改）

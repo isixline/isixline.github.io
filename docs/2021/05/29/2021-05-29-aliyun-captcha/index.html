@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        阿里云人机校验 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/aircloud.css">
+
+    
+<link rel="stylesheet" href="/css/gitment.css">
+
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> sometimes code， sometimes design </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/img/avatar.jpg" />
+        </div>
+        <div class="name">
+            <i>isixline</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%BF%E9%87%8C%E4%BA%91%E4%BA%BA%E6%9C%BA%E6%A0%A1%E9%AA%8C%EF%BC%88%E6%BB%91%E5%8A%A8%E6%A0%A1%E9%AA%8C%EF%BC%89"><span class="toc-text">阿里云人机校验（滑动校验）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81%E6%B5%81%E7%A8%8B"><span class="toc-text">验证流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-text">配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAAccessKey"><span class="toc-text">创建AccessKey</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0captcha%E9%85%8D%E7%BD%AE"><span class="toc-text">添加captcha配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81%E9%9B%86%E6%88%90"><span class="toc-text">前端代码集成</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%95%E5%85%A5js%E5%8C%85"><span class="toc-text">引入js包</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%87%E8%AF%86dom"><span class="toc-text">标识dom</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E6%BB%91%E5%9D%97"><span class="toc-text">初始化滑块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E5%8F%82%E6%95%B0"><span class="toc-text">其他参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#nc%E5%AF%B9%E8%B1%A1"><span class="toc-text">nc对象</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8E%E7%AB%AF%E4%BB%A3%E7%A0%81%E9%9B%86%E6%88%90"><span class="toc-text">后端代码集成</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%95%E5%85%A5%E4%BE%9D%E8%B5%96"><span class="toc-text">引入依赖</span></a></li></ol></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> sometimes code， sometimes design </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        阿里云人机校验
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2021-05-29 00:00:00</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#第三方集成" title="第三方集成">第三方集成</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h2 id="阿里云人机校验（滑动校验）"><a href="#阿里云人机校验（滑动校验）" class="headerlink" title="阿里云人机校验（滑动校验）"></a>阿里云人机校验（滑动校验）</h2><p><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/121893.html?spm=5176.2020520162.0.dexternal.73285fb0WkhLIZ">官方文档</a></p>
+<h3 id="验证流程"><a href="#验证流程" class="headerlink" title="验证流程"></a>验证流程</h3><ul>
+<li>客户端 -&gt; 阿里云服务器：获取验签所需参数</li>
+<li>客户端 -&gt; 应用服务器：验证所需参数和业务代码</li>
+<li>应用服务器 -&gt; 阿里云服务器：验签</li>
+</ul>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><h4 id="创建AccessKey"><a href="#创建AccessKey" class="headerlink" title="创建AccessKey"></a>创建AccessKey</h4><p>访问密钥AccessKey（AK）相当于登录密码，只是使用场景不同。</p>
+<p>AccessKey用于程序方式调用云服务API，而登录密码用于登录控制台。</p>
+<ul>
+<li>AccessKey ID用于标识用户。</li>
+<li>AccessKey Secret是用来验证用户的密钥。AccessKey Secret必须保密。</li>
+</ul>
+<h4 id="添加captcha配置"><a href="#添加captcha配置" class="headerlink" title="添加captcha配置"></a>添加captcha配置</h4><ul>
+<li>配置名称（后期可修改）</li>
+<li>高峰期OPS（貌似随便填）</li>
+<li>业务类型 + 验证方式 + 使用场景 （组成一个配置，也就是最多可以有2 * 3 * 6个配置，配置成功后不可删除）<br>ps：配置不可删除，不使用，不付费。<br>ps：自2020年9月起，阿里云人机验证服务接入集成模块已升级为新版，需使用新版代码集成。</li>
+</ul>
+<h3 id="前端代码集成"><a href="#前端代码集成" class="headerlink" title="前端代码集成"></a>前端代码集成</h3><h4 id="引入js包"><a href="#引入js包" class="headerlink" title="引入js包"></a>引入js包</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://g.alicdn.com/AWSC/AWSC/awsc.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="标识dom"><a href="#标识dom" class="headerlink" title="标识dom"></a>标识dom</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;nc&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="初始化滑块"><a href="#初始化滑块" class="headerlink" title="初始化滑块"></a>初始化滑块</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 实例化nc</span></span><br><span class="line">AWSC.use(<span class="string">&quot;nc&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">state, <span class="built_in">module</span></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// state标识状态，首次实例化会加载外部js，timeout为获取超时，loaded为已加载</span></span><br><span class="line">    <span class="keyword">if</span> (state === <span class="string">&#x27;timeout&#x27;</span>) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;nc timeout&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 初始化</span></span><br><span class="line">    <span class="keyword">const</span> nc = <span class="built_in">module</span>.init(&#123;</span><br><span class="line">        <span class="comment">// 应用类型标识,配置管理页签可找到对应的appkey值</span></span><br><span class="line">        <span class="attr">appkey</span>: <span class="string">&quot;CF_APP_1&quot;</span>,</span><br><span class="line">        <span class="comment">//使用场景标识，配置管理页签可找到对应的scene值</span></span><br><span class="line">        <span class="attr">scene</span>: <span class="string">&quot;register&quot;</span>,</span><br><span class="line">        <span class="comment">// 声明滑动验证需要渲染的目标ID。</span></span><br><span class="line">        <span class="attr">renderTo</span>: <span class="string">&quot;nc&quot;</span>,</span><br><span class="line">        <span class="comment">//前端滑动验证通过时会触发该回调参数。会话ID（sessionId）、签名串（sig）、请求唯一标识（token）需随业务请求一同发送至端验签</span></span><br><span class="line">        <span class="attr">success</span>: <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">            <span class="built_in">window</span>.console &amp;&amp; <span class="built_in">console</span>.log(data.sessionId)</span><br><span class="line">            <span class="built_in">window</span>.console &amp;&amp; <span class="built_in">console</span>.log(data.sig)</span><br><span class="line">            <span class="built_in">window</span>.console &amp;&amp; <span class="built_in">console</span>.log(data.token)</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment">// 滑动验证失败时触发该回调参数。</span></span><br><span class="line">        <span class="attr">fail</span>: <span class="function"><span class="keyword">function</span> (<span class="params">failCode</span>) </span>&#123;</span><br><span class="line">             <span class="built_in">window</span>.console &amp;&amp; <span class="built_in">console</span>.log(failCode)</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment">// 验证码加载出现异常时触发该回调参数。</span></span><br><span class="line">        <span class="attr">error</span>: <span class="function"><span class="keyword">function</span> (<span class="params">errorCode</span>) </span>&#123;</span><br><span class="line">             <span class="built_in">window</span>.console &amp;&amp; <span class="built_in">console</span>.log(errorCode)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="其他参数"><a href="#其他参数" class="headerlink" title="其他参数"></a>其他参数</h4><ul>
+<li>language，语言，默认cn</li>
+<li>width，滑动条宽度，默认300</li>
+<li>height，滑动条高度（亲测未生效），默认34</li>
+<li>fontSize，字体大小，默认12</li>
+<li>hideErrorCode，隐藏验证时的错误码，默认false</li>
+<li>upLang，自定义文案</li>
+<li>test，用于测试验证码的不同状态（module.TEST_PASS，module.TEST_BLOCK</li>
+</ul>
+<h4 id="nc对象"><a href="#nc对象" class="headerlink" title="nc对象"></a>nc对象</h4><ul>
+<li>reset</li>
+<li>hide</li>
+<li>show</li>
+</ul>
+<h3 id="后端代码集成"><a href="#后端代码集成" class="headerlink" title="后端代码集成"></a>后端代码集成</h3><h4 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h4><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">compile</span> <span class="string">&#x27;com.aliyun:aliyun-java-sdk-core:4.5.1&#x27;</span></span><br><span class="line"><span class="keyword">compile</span> <span class="string">&#x27;com.aliyun:aliyun-java-sdk-afs:1.0.1&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CaptchaService</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String PRODUCT = <span class="string">&quot;afs&quot;</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String END_POINT = <span class="string">&quot;afs.aliyuncs.com&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Value(&quot;$&#123;aliyun.captcha.region-id&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String regionId;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Value(&quot;$&#123;aliyun.captcha.access-key-id&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String accessKeyId;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Value(&quot;$&#123;aliyun.captcha.access-key-secret&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String accessKeySecret;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Value(&quot;$&#123;captcha.enabled&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span> captchaEnabled;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> IAcsClient client;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> IAcsClient <span class="title">getClient</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (client == <span class="keyword">null</span>) &#123;</span><br><span class="line">            IClientProfile profile =</span><br><span class="line">                    DefaultProfile.getProfile(regionId, accessKeyId, accessKeySecret);</span><br><span class="line">            client = <span class="keyword">new</span> DefaultAcsClient(profile);</span><br><span class="line">            DefaultProfile.addEndpoint(regionId, PRODUCT, END_POINT);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> client;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">verify</span><span class="params">(HttpServletRequest httpRequest, CaptchaVerifyRequest captchaVerify)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!captchaEnabled) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">null</span> == captchaVerify) &#123;</span><br><span class="line">            <span class="keyword">throw</span> UnauthorizedException.unauthorized(<span class="string">&quot;captcha_verify_empty&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        AuthenticateSigRequest request = <span class="keyword">new</span> AuthenticateSigRequest();</span><br><span class="line">        request.setSessionId(captchaVerify.getSessionId()); <span class="comment">// 会话ID。必填参数，从前端获取，不可更改。</span></span><br><span class="line">        request.setSig(captchaVerify.getSig()); <span class="comment">// 签名串。必填参数，从前端获取，不可更改。</span></span><br><span class="line">        request.setToken(captchaVerify.getToken()); <span class="comment">// 请求唯一标识。必填参数，从前端获取，不可更改。</span></span><br><span class="line">        request.setScene(captchaVerify.getScene()); <span class="comment">// 场景标识。必填参数，从前端获取，不可更改。</span></span><br><span class="line">        request.setAppKey(captchaVerify.getAppKey()); <span class="comment">// 应用类型标识。必填参数，后端填写。</span></span><br><span class="line">        request.setRemoteIp(IpUtils.getRealIpAddress(httpRequest)); <span class="comment">// 客户端IP。必填参数，后端填写。</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">// response的code枚举：100验签通过，900验签失败</span></span><br><span class="line">            AuthenticateSigResponse response = getClient().getAcsResponse(request);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (!response.getCode().equals(<span class="number">100</span>)) &#123;</span><br><span class="line">                log.info(response.getMsg());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (ClientException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>  Theme <a target="_blank" rel="noopener" href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/js/index.js"></script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>
