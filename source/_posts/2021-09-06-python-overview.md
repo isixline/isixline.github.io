@@ -1,7 +1,8 @@
 ---
-layout: post
-title:  "Python overview"
-categories:  Python
+title: Python Overview
+date: 2021-09-06 00:00
+tags:
+    - python
 ---
 
 ## 安装python3
@@ -156,7 +157,7 @@ classmates.pop(1)
 ```
 #### 元素数据类型
 ```
-L = ['Apple', 123, True]
+l = ['Apple', 123, True]
 ```
 ```
 s = ['python', 'java', ['asp', 'php'], 'scheme']
