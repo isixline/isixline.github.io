@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        Python Overview - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/aircloud.css">
+
+    
+<link rel="stylesheet" href="/css/gitment.css">
+
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> sometimes code， sometimes design </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/img/avatar.jpg" />
+        </div>
+        <div class="name">
+            <i>isixline</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85python3"><span class="toc-text">安装python3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#python-%E5%91%BD%E4%BB%A4%E7%8E%AF%E5%A2%83"><span class="toc-text">python 命令环境</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5%E5%91%BD%E4%BB%A4%E7%8E%AF%E5%A2%83"><span class="toc-text">进入命令环境</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%80%E5%87%BA%E5%91%BD%E4%BB%A4%E7%8E%AF%E5%A2%83"><span class="toc-text">退出命令环境</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hello-world"><span class="toc-text">Hello world</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C"><span class="toc-text">命令行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%9A%E8%BF%87python%E8%A7%A3%E9%87%8A%E5%99%A8%E6%89%A7%E8%A1%8Cpython%E6%96%87%E4%BB%B6"><span class="toc-text">通过python解释器执行python文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%B4%E6%8E%A5%E6%89%A7%E8%A1%8Cpython%E6%96%87%E4%BB%B6"><span class="toc-text">直接执行python文件</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA"><span class="toc-text">输入和输出</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5"><span class="toc-text">输入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%87%BA"><span class="toc-text">输出</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A"><span class="toc-text">注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%A9%E8%BF%9B"><span class="toc-text">缩进</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B4%E6%95%B0"><span class="toc-text">整数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%AE%E7%82%B9%E6%95%B0"><span class="toc-text">浮点数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%83%E5%B0%94%E5%80%BC"><span class="toc-text">布尔值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A9%BA%E5%80%BC"><span class="toc-text">空值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B8%B8%E9%87%8F"><span class="toc-text">变量与常量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-text">变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F"><span class="toc-text">常量</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#list"><span class="toc-text">list</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-text">基本操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">元素数据类型</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tuple"><span class="toc-text">tuple</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dict"><span class="toc-text">dict</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#set"><span class="toc-text">set</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD"><span class="toc-text">条件判断</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF"><span class="toc-text">循环</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#for%E2%80%A6in"><span class="toc-text">for…in</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#while"><span class="toc-text">while</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-text">函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0"><span class="toc-text">内置函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0"><span class="toc-text">定义函数</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0"><span class="toc-text">默认参数</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0"><span class="toc-text">可变参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E5%AD%97%E5%8F%82%E6%95%B0"><span class="toc-text">关键字参数</span></a></li></ol></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> sometimes code， sometimes design </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        Python Overview
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2021-09-06 00:00:00</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#python" title="python">python</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h2 id="安装python3"><a href="#安装python3" class="headerlink" title="安装python3"></a>安装python3</h2><p>Mac 自带 python2<br>安装python3</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install python3</span><br></pre></td></tr></table></figure>
+
+<h2 id="python-命令环境"><a href="#python-命令环境" class="headerlink" title="python 命令环境"></a>python 命令环境</h2><h4 id="进入命令环境"><a href="#进入命令环境" class="headerlink" title="进入命令环境"></a>进入命令环境</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3</span><br></pre></td></tr></table></figure>
+<h4 id="退出命令环境"><a href="#退出命令环境" class="headerlink" title="退出命令环境"></a>退出命令环境</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exit()</span><br></pre></td></tr></table></figure>
+<p>或<br>crl + d</p>
+<h2 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello world"></a>Hello world</h2><h4 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(&#x27;Hello world&#x27;)</span><br></pre></td></tr></table></figure>
+<h4 id="通过python解释器执行python文件"><a href="#通过python解释器执行python文件" class="headerlink" title="通过python解释器执行python文件"></a>通过python解释器执行python文件</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 hello.py</span><br></pre></td></tr></table></figure>
+<h4 id="直接执行python文件"><a href="#直接执行python文件" class="headerlink" title="直接执行python文件"></a>直接执行python文件</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/env python3</span><br><span class="line"></span><br><span class="line">print(&#x27;Hello world&#x27;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod a+x hello.py</span><br><span class="line">./hello.py</span><br></pre></td></tr></table></figure>
+
+<h2 id="输入和输出"><a href="#输入和输出" class="headerlink" title="输入和输出"></a>输入和输出</h2><h4 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name = input()</span><br></pre></td></tr></table></figure>
+<p>在按下回车前输入的内容都会以字符串的形式存储在name中</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name = input(&#x27;Please enter your name: &#x27;)</span><br></pre></td></tr></table></figure>
+<p>提示语</p>
+<h4 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(&#x27;a&#x27;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;)</span><br></pre></td></tr></table></figure>
+<p>多个字符串时，输出默认以空格分隔（如：’a b c’）</p>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># 这是一段注释</span><br></pre></td></tr></table></figure>
+
+<h2 id="缩进"><a href="#缩进" class="headerlink" title="缩进"></a>缩进</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = 100</span><br><span class="line">if a &gt;= 0:</span><br><span class="line">    print(a)</span><br><span class="line">else:</span><br><span class="line">    print(-a</span><br></pre></td></tr></table></figure>
+<p>以缩进标识代码块</p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h2 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h2><p>十进制：0，1，-10<br>十六进制：0xff00（用0x前缀和0-9，a-f表示）</p>
+<h2 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h2><p>小数：0.1，-11.1<br>科学计数法：1.23e9（1.23x10<sup>9</sup>），1.2e-5（0.000012）</p>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">print(&#x27;abc&#x27;)</span><br><span class="line">print(&quot;abc&quot;)</span><br><span class="line">print(&quot;I&#x27;m good!&quot;)</span><br><span class="line">print(&#x27;I\&#x27;m \&quot;OK\&quot;!&#x27;)</span><br><span class="line">print(r&#x27;\t&#x27;)</span><br><span class="line">print(&#x27;&#x27;&#x27;line1</span><br><span class="line">line2</span><br><span class="line">line3&#x27;&#x27;&#x27;)</span><br></pre></td></tr></table></figure>
+<h2 id="布尔值"><a href="#布尔值" class="headerlink" title="布尔值"></a>布尔值</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">True and False</span><br><span class="line">True or False</span><br><span class="line">not True</span><br></pre></td></tr></table></figure>
+<h2 id="空值"><a href="#空值" class="headerlink" title="空值"></a>空值</h2><p>None</p>
+<p>ps: Python的整数没有大小限制，浮点数也没有大小限制，但是超出一定范围就直接表示为inf（无限大）。</p>
+<h2 id="变量与常量"><a href="#变量与常量" class="headerlink" title="变量与常量"></a>变量与常量</h2><h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><p>变量名是大小写英文、数字和_的组合，且不能用数字开头</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = &#x27;ABC&#x27;</span><br><span class="line">b = a</span><br><span class="line">a = 123</span><br></pre></td></tr></table></figure>
+<p>Python解释器做了这几件事情：</p>
+<ol>
+<li>在内存中创建了一个’ABC’的字符串。</li>
+<li>在内存中创建了一个名为a的变量，并把它指向’ABC’。</li>
+<li>在内存中创建了一个名为b的变量</li>
+<li>把b指向a所指向的数据</li>
+<li>在内存中创建了一个123的整数</li>
+<li>把a指向123<br>最后print(a)为123，print(b)为’ABC’<h4 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h4>通常用全部大写的变量名表示常量。 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PI = 3.14159265359</span><br></pre></td></tr></table></figure>
+但事实上PI仍然是一个变量，Python根本没有任何机制保证PI不会被改变</li>
+</ol>
+<h2 id="list"><a href="#list" class="headerlink" title="list"></a>list</h2><p>list是一种有序的集合，可以随时添加和删除其中的元素</p>
+<h4 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">classmates = [&#x27;Michael&#x27;, &#x27;Bob&#x27;, &#x27;Tracy&#x27;]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">len(classmates)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">classmates[-1]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">classmates.append(&#x27;Adam&#x27;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">classmates.insert(1, &#x27;Jack&#x27;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">classmates.pop()</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">classmates.pop(1)</span><br></pre></td></tr></table></figure>
+<h4 id="元素数据类型"><a href="#元素数据类型" class="headerlink" title="元素数据类型"></a>元素数据类型</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">l = [&#x27;Apple&#x27;, 123, True]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s = [&#x27;python&#x27;, &#x27;java&#x27;, [&#x27;asp&#x27;, &#x27;php&#x27;], &#x27;scheme&#x27;]</span><br></pre></td></tr></table></figure>
+
+<h2 id="tuple"><a href="#tuple" class="headerlink" title="tuple"></a>tuple</h2><p>另一种有序列表叫元组：tuple。tuple和list非常类似，但是tuple一旦初始化就不能修改。<br>因为tuple不可变，所以代码更安全。如果可能，能用tuple代替list就尽量用tuple。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">t = (1, 2)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">t = (1,)</span><br></pre></td></tr></table></figure>
+
+<h2 id="dict"><a href="#dict" class="headerlink" title="dict"></a>dict</h2><p>dict全称dictionary，在其他语言中也称为map，使用键-值（key-value）存储，具有极快的查找速度。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">d = &#123;&#x27;Michael&#x27;: 95, &#x27;Bob&#x27;: 75, &#x27;Tracy&#x27;: 85&#125;</span><br><span class="line">print(d[&#x27;Michael&#x27;])</span><br><span class="line">d[&#x27;Adam&#x27;] = 67</span><br></pre></td></tr></table></figure>
+<p>判断key是否存在</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x27;Thomas&#x27; in d</span><br><span class="line"></span><br><span class="line">d.get(&#x27;Thomas&#x27;)</span><br><span class="line">d.get(&#x27;Thomas&#x27;, -1)</span><br></pre></td></tr></table></figure>
+<p>删除key-value</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">d.pop(&#x27;Bob&#x27;)</span><br></pre></td></tr></table></figure>
+<p>dict的key必须是不可变对象，如字符串、整数。<br>这是因为dict根据key来计算value的存储位置。</p>
+<h2 id="set"><a href="#set" class="headerlink" title="set"></a>set</h2><p>set和dict类似，也是一组key的集合，但不存储value。由于key不能重复，所以，在set中，没有重复的key。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s = set([1, 1, 2, 2, 3, 3])</span><br></pre></td></tr></table></figure>
+<p>重复元素在set中自动被过滤。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s.add(4)</span><br><span class="line">s.remove(4)</span><br></pre></td></tr></table></figure>
+<p>set可以看成数学意义上的无序和无重复元素的集合，因此，两个set可以做数学意义上的交集、并集等操作：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s1 &amp; s2</span><br><span class="line"></span><br><span class="line">s1 | s2</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="条件判断"><a href="#条件判断" class="headerlink" title="条件判断"></a>条件判断</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">age = 3</span><br><span class="line">if age &gt;= 18:</span><br><span class="line">    print(&#x27;adult&#x27;)</span><br><span class="line">elif age &gt;= 6:</span><br><span class="line">    print(&#x27;teenager&#x27;)</span><br><span class="line">else:</span><br><span class="line">    print(&#x27;kid&#x27;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if x:</span><br><span class="line">    print(&#x27;True&#x27;)</span><br></pre></td></tr></table></figure>
+<p>只要x是非零数值、非空字符串、非空list等，就判断为True，否则为False。</p>
+<h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><h4 id="for…in"><a href="#for…in" class="headerlink" title="for…in"></a>for…in</h4><p>依次把list或tuple中的每个元素迭代出来</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">names = [&#x27;Michael&#x27;, &#x27;Bob&#x27;, &#x27;Tracy&#x27;]</span><br><span class="line">for name in names:</span><br><span class="line">    print(name)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sum = 0</span><br><span class="line">for x in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]:</span><br><span class="line">    sum = sum + x</span><br><span class="line">print(sum)</span><br></pre></td></tr></table></figure>
+<p>生成一个整数序列</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">list(range(5))</span><br></pre></td></tr></table></figure>
+<h4 id="while"><a href="#while" class="headerlink" title="while"></a>while</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sum = 0</span><br><span class="line">n = 99</span><br><span class="line">while n &gt; 0:</span><br><span class="line">    sum = sum + n</span><br><span class="line">    n = n - 2</span><br><span class="line">print(sum)</span><br></pre></td></tr></table></figure>
+<p>break：提前结束循环。<br>continue：跳过当前的这次循环，</p>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h4 id="内置函数"><a href="#内置函数" class="headerlink" title="内置函数"></a>内置函数</h4><p>数学计算</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">abs(-100)</span><br><span class="line"></span><br><span class="line">max(1, 2, 3)</span><br><span class="line"></span><br><span class="line">min(1, 2, 3)</span><br></pre></td></tr></table></figure>
+<p>数据类型转换</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">int(&#x27;123&#x27;)</span><br><span class="line">int(12.3)</span><br><span class="line"></span><br><span class="line">float(&#x27;12.3&#x27;)</span><br><span class="line"></span><br><span class="line">str(1.23)</span><br><span class="line"></span><br><span class="line">bool(1)</span><br></pre></td></tr></table></figure>
+<p>类型检查</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">isinstance(x, (int, float))</span><br></pre></td></tr></table></figure>
+<h4 id="定义函数"><a href="#定义函数" class="headerlink" title="定义函数"></a>定义函数</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">def my_abs(x):</span><br><span class="line">    if x &gt;= 0:</span><br><span class="line">        return x</span><br><span class="line">    else:</span><br><span class="line">        return -x</span><br></pre></td></tr></table></figure>
+<p>空函数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">def nop():</span><br><span class="line">    pass</span><br></pre></td></tr></table></figure>
+<p>返回多个值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import math</span><br><span class="line"></span><br><span class="line">def move(x, y, step, angle=0):</span><br><span class="line">    nx = x + step * math.cos(angle)</span><br><span class="line">    ny = y - step * math.sin(angle)</span><br><span class="line">    return nx, ny</span><br></pre></td></tr></table></figure>
+<p>返回值是其实是一个tuple！但是，在语法上，返回一个tuple可以省略括号，而多个变量可以同时接收一个tuple，按位置赋给对应的值。</p>
+<h5 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def power(x, n=2):</span><br><span class="line">    s = 1</span><br><span class="line">    while n &gt; 0:</span><br><span class="line">        n = n - 1</span><br><span class="line">        s = s * x</span><br><span class="line">    return s</span><br></pre></td></tr></table></figure>
+<p>必选参数在前，默认参数在后。<br>当函数有多个参数时，把变化大的参数放前面，变化小的参数放后面。变化小的参数就可以作为默认参数。<br>默认参数降低了函数调用的难度，而一旦需要更复杂的调用时，又可以传递更多的参数来实现。无论是简单调用还是复杂调用，函数只需要定义一个。</p>
+<h4 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">def calc(*numbers):</span><br><span class="line">    sum = 0</span><br><span class="line">    for n in numbers:</span><br><span class="line">        sum = sum + n * n</span><br><span class="line">    return sum</span><br><span class="line"></span><br><span class="line"> calc(1, 3, 5, 7)</span><br></pre></td></tr></table></figure>
+<p>可变参数允许你传入0个或任意个参数，这些可变参数在函数调用时自动组装为一个tuple。</p>
+<h4 id="关键字参数"><a href="#关键字参数" class="headerlink" title="关键字参数"></a>关键字参数</h4><p>而关键字参数允许你传入0个或任意个含参数名的参数，这些关键字参数在函数内部自动组装为一个dict。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def person(name, age, **kw):</span><br><span class="line">    print(&#x27;name:&#x27;, name, &#x27;age:&#x27;, age, &#x27;other:&#x27;, kw)</span><br><span class="line"></span><br><span class="line">person(&#x27;Adam&#x27;, 45, gender=&#x27;M&#x27;, job=&#x27;Engineer&#x27;)</span><br></pre></td></tr></table></figure>
+<p>如果要限制关键字参数的名字，就可以用命名关键字参数，例如，只接收city和job作为关键字参数。这种方式定义的函数如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">def person(name, age, *, city, job):</span><br><span class="line">    print(name, age, city, job)</span><br><span class="line"></span><br><span class="line">def person(name, age, *, city=&#x27;Beijing&#x27;, job):</span><br><span class="line">    print(name, age, city, job)</span><br></pre></td></tr></table></figure>
+<p>和关键字参数*<em>kw不同，命名关键字参数需要一个特殊分隔符</em>，*后面的参数被视为命名关键字参数。</p>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>  Theme <a target="_blank" rel="noopener" href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/js/index.js"></script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>
