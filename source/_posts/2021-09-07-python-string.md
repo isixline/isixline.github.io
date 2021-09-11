@@ -1,8 +1,8 @@
-
 ---
-layout: post
-title:  "Python String"
-categories:  Python String
+title: Python String
+date: 2021-09-07 00:00
+tags:
+    - python
 ---
 
 ## 字符串
