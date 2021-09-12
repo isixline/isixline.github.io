@@ -1,6 +1,8 @@
 ---
-title: 创建react项目 date: 2021-08-23 00:00 tags:
-- react
+title: 创建react项目 
+date: 2021-08-23 00:00 
+tags:
+    - react
 ---
 
 ## 安装create-react-app工具
