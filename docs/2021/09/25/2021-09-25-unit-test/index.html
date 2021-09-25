@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        单元测试 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/aircloud.css">
+
+    
+<link rel="stylesheet" href="/css/gitment.css">
+
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> sometimes code， sometimes design </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/img/avatar.jpg" />
+        </div>
+        <div class="name">
+            <i>isixline</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95"><span class="toc-text">什么是单元测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E7%9A%84%E7%9B%AE%E7%9A%84"><span class="toc-text">单元测试的目的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95%EF%BC%88%E4%BB%A5JUnit%E4%B8%BA%E4%BE%8B%EF%BC%89"><span class="toc-text">一个测试（以JUnit为例）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E8%8C%83%E5%9B%B4"><span class="toc-text">测试范围</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E7%9B%AE%E6%A0%87"><span class="toc-text">测试目标</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%91%BD%E5%90%8D"><span class="toc-text">命名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mock%E4%BD%BF%E7%94%A8"><span class="toc-text">mock使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%AD%E8%A8%80%E6%A3%80%E6%9F%A5"><span class="toc-text">断言检查</span></a></li></ol></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> sometimes code， sometimes design </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        单元测试
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2021-09-25 00:00:00</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#test" title="test">test</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h2 id="什么是单元测试"><a href="#什么是单元测试" class="headerlink" title="什么是单元测试"></a>什么是单元测试</h2><p>在计算机编程中，单元测试（英语：Unit Testing）又称为模块测试，是针对程序模块（软件设计的最小单位）来进行正确性检验的测试工作。</p>
+<p>程序单元是应用的最小可测试部件，但单元是一个相对概念，比如：一个方法，一个类都可以称之为一个单元。</p>
+<p>相对于单元测试的，是集成测试，E2E测试，是针对整个系统完整进行一次业务操作的测试。</p>
+<p>ps：<br>另一种测试分类：</p>
+<ul>
+<li>小型测试，针对单个函数的测试，关注其内部逻辑，mock所有需要的服务。小型测试带来优秀的代码质量、良好的异常处理、优雅的错误报告。</li>
+<li>中型测试，验证两个或多个制定的模块应用之间的交互大型测试，也被称为“系统测试”或“端到端测试”。</li>
+<li>大型测试在一个较高层次上运行，验证系统作为一个整体是如何工作的。</li>
+</ul>
+<h2 id="单元测试的目的"><a href="#单元测试的目的" class="headerlink" title="单元测试的目的"></a>单元测试的目的</h2><p>对最小组成部分进行测试，保证这些部件安全可用。</p>
+<p>再使用这些部件串联起来，组成更大的部件，这个被组合成的大部件就只需要关注内部小部件的串联关系就好。<br>保证测试覆盖足够广且最少进行不必要的重复测试。</p>
+<h2 id="一个测试（以JUnit为例）"><a href="#一个测试（以JUnit为例）" class="headerlink" title="一个测试（以JUnit为例）"></a>一个测试（以JUnit为例）</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ExtendWith(MockitoExtension.class)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UserServiceTest</span> </span>&#123;</span><br><span class="line">    <span class="meta">@InjectMocks</span></span><br><span class="line">    <span class="keyword">private</span> UserService userService;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Mock</span></span><br><span class="line">    <span class="keyword">private</span> UserRepository userRepository;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">should_throw_not_found_when_get_not_exists_user</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// given</span></span><br><span class="line">        Mockito.when(userRepository.findById(eq(<span class="string">&quot;test-user-id&quot;</span>)))</span><br><span class="line">                .thenReturn(Optional.empty());</span><br><span class="line">        <span class="comment">// when</span></span><br><span class="line">        BaseException exception = assertThrows(UserException.class, () -&gt; &#123;</span><br><span class="line">            userService.get(<span class="string">&quot;test-user-id&quot;</span>);</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// then</span></span><br><span class="line">        assertEquals(<span class="string">&quot;user_not_found&quot;</span>, exception.getMessage());</span><br><span class="line">        assertEquals(BaseException.Type.NOT_FOUND, exception.getType());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="测试范围"><a href="#测试范围" class="headerlink" title="测试范围"></a>测试范围</h4><p>所有对外暴露出去的public方法</p>
+<h4 id="测试目标"><a href="#测试目标" class="headerlink" title="测试目标"></a>测试目标</h4><p>理论上单元测试应该测试该方法中的所有逻辑分支。</p>
+<p>但如果已经存在覆盖happy path的集成测试，那么单元测试应当针对于该业务方法中的异常。<br>集成测试注重该业务操作的流程顺利可执行，单元测试注重维护对应业务方法是否正确保护了业务数据。不同类型的测试相互配合，有所侧重。</p>
+<p>当然，如果写相当完善的单元测试是相当好的，只是在精力，时间，维护性上要有所权衡。</p>
+<h4 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h4><ul>
+<li>UserServiceTest是UserService的测试，保持同名并加Test后缀</li>
+<li>should_throw_not_found_when_get_not_exists_user以should_xxx_when_xxx命名，语义不清楚时还可加上_given_xxx</li>
+</ul>
+<h4 id="mock使用"><a href="#mock使用" class="headerlink" title="mock使用"></a>mock使用</h4><p>这里使用Mockito的mock框架。</p>
+<ul>
+<li>@ExtendWith(MockitoExtension.class)，其中@ExtendWith注解是由Jupiter（JUnit5）提供的标记接口。这是在测试类或方法上注册自定义扩展的方法，目的是让Jupiter测试引擎调用给定类或方法的自定义扩展。</li>
+<li>@Mock：使用注解创建一个Mock</li>
+<li>@InjectMocks：创建一个实例，是被测试实例，用@Mock（或@Spy）注解创建的mock将被注入到用该实例中</li>
+</ul>
+<p>定制mock对象行为：<br>这里使用了when(…).thenReturn(…) 方法链来定义一个行为<br>ps：<br>一个有趣的地方, when(…).thenReturn(…).thenReturn(…)方法链可以指定多个返回值, 如果多次调用指定的方法, 那么这个方法会依次返回这些值。</p>
+<h4 id="断言检查"><a href="#断言检查" class="headerlink" title="断言检查"></a>断言检查</h4><p>由于在该例子中是检验异常，所以使用了assertThrows来检查异常类型并获取该异常。<br>对于异常内容的检查使用了assertEquals。</p>
+<p>assertEquals是一个重载方法，可以断言各种支持的数据类型，在使用中只需考虑语义而不需要特意区分不同数据类型所使用的方法。<br>assertEquals(expected, actual)</p>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>  Theme <a target="_blank" rel="noopener" href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/js/index.js"></script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>
