@@ -34,7 +34,6 @@
 .post-content {
   line-height: 20px;
   font-size: 15px;
-  text-indent: 2em;
   color: #333333;
   font-weight: 300;
 }
@@ -67,7 +66,6 @@
   color: #404040;
   font-size: 14px;
   line-height: 30px;
-  text-indent: 2em;
   letter-spacing: 1px;
 }
 .post-content p img {
@@ -83,7 +81,6 @@
   color: #404040;
   font-size: 14px;
   line-height: 30px;
-  text-indent: 2em;
   letter-spacing: 1px;
   margin-bottom: 5px;
   margin-top: 5px;
