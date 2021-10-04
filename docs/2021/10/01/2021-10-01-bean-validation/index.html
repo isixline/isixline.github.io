@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        Bean Validation - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/aircloud.css">
+
+    
+<link rel="stylesheet" href="/css/gitment.css">
+
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> sometimes code， sometimes design </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/img/avatar.jpg" />
+        </div>
+        <div class="name">
+            <i>isixline</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E5%85%A5%E4%BE%9D%E8%B5%96"><span class="toc-text">引入依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3"><span class="toc-text">一些常用注解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%AA%8C%E8%AF%81%E6%B3%A8%E8%A7%A3"><span class="toc-text">自定义验证注解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%90%AF%E9%AA%8C%E8%AF%81"><span class="toc-text">开启验证</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Validated%E5%92%8C-Valid"><span class="toc-text">@Validated和@Valid</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9RequestBody%E9%AA%8C%E8%AF%81"><span class="toc-text">对RequestBody验证</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9RequestParam%E9%AA%8C%E8%AF%81"><span class="toc-text">对RequestParam验证</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8"><span class="toc-text">捕获异常</span></a></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> sometimes code， sometimes design </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        Bean Validation
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2021-10-01 00:00:00</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#java" title="java">java</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h2 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h2><p>先看一段代码，在业务中经常会有对请求值的校验，最直接的方式，if堆高高，一个个参数进行校验。<br>可以满足需要，但是不够优雅简洁，也难以统一。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserCreateRequest</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String email;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String password;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">validate</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.email == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">throw</span> xxxx;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.name == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">throw</span> xxxx;</span><br><span class="line">        &#125;</span><br><span class="line">        ....</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Bean Validation就定义了一套规范，是一套基于注解的数据校验规范，定义了用于JavaBean验证的元数据模型和API。 </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserCreateRequest</span> </span>&#123;</span><br><span class="line">    <span class="meta">@NotEmpty</span></span><br><span class="line">    <span class="meta">@GeneralEmail</span></span><br><span class="line">    <span class="keyword">private</span> String email;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@NotBlank</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@NotBlank</span></span><br><span class="line">    <span class="keyword">private</span> String password;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h2><p>如果spring-boot版本小于2.3.x，spring-boot-starter-web会自动传入hibernate-validator依赖。<br>如果spring-boot版本大于2.3.x，则需要手动引入依赖：org.springframework.boot:spring-boot-starter-validation。<br>spring-boot-starter-validation是对hibernate-validation的二次封装， 而hibernate-validation是对该规范的实现，并增加了@Email、@Length等注解。</p>
+<h2 id="一些常用注解"><a href="#一些常用注解" class="headerlink" title="一些常用注解"></a>一些常用注解</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@NotNull</span> <span class="comment">// 不为null</span></span><br><span class="line"><span class="meta">@NotEmpty</span> <span class="comment">// String、Collection、Map，不为null，并且长度大于0</span></span><br><span class="line"><span class="meta">@NotBlank</span> <span class="comment">// String不为null，并且trim后长度大于0</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@Size(min = x, max = x)</span> <span class="comment">// String、Collection、Map，长度在min和max范围内</span></span><br><span class="line"><span class="meta">@Length(min = x, max = x)</span> <span class="comment">// String，长度在min和max范围内</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@Max(value)</span> <span class="comment">// 数字、数字格式String，大于等于value</span></span><br><span class="line"><span class="meta">@Min(value)</span> <span class="comment">// 数字、数字格式String，小于等于value</span></span><br><span class="line"><span class="meta">@Range(min = x, max = x)</span> <span class="comment">// 数字、数字格式String，数值在min和max范围内</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@Future</span> <span class="comment">// 将来某个日期</span></span><br><span class="line"><span class="meta">@Past</span> <span class="comment">// 过去某个日期</span></span><br><span class="line"><span class="meta">@PastOrPresent</span> <span class="comment">// 过去及现在某个日期</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@Pattern</span> <span class="comment">// 满足给定的正则表达式</span></span><br><span class="line"><span class="meta">@Email</span> <span class="comment">// 满足Email格式</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@AssertFalse</span> <span class="comment">// 所注解的元素必须是Boolean类型，且值为false</span></span><br><span class="line"><span class="meta">@AssertTrue</span> <span class="comment">// 所注解的元素必须是Boolean类型，且值为true</span></span><br><span class="line"><span class="meta">@Null</span> <span class="comment">// 所注解的元素值为null</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="自定义验证注解"><a href="#自定义验证注解" class="headerlink" title="自定义验证注解"></a>自定义验证注解</h2><p>这里举个🌰，@AccountName为验证为phone或者email格式</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Documented</span></span><br><span class="line"><span class="meta">@Constraint(validatedBy = AccountNameValidator.class)</span></span><br><span class="line"><span class="meta">@Target(&#123;FIELD, PARAMETER&#125;)</span></span><br><span class="line"><span class="meta">@Retention(RUNTIME)</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> AccountName &#123;</span><br><span class="line">    <span class="function">String <span class="title">message</span><span class="params">()</span> <span class="keyword">default</span> &quot;Invalid account name&quot;</span>;</span><br><span class="line"></span><br><span class="line">    Class[] groups() <span class="keyword">default</span> &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    Class[] payload() <span class="keyword">default</span> &#123;&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AccountNameValidator</span> <span class="keyword">implements</span> <span class="title">ConstraintValidator</span>&lt;<span class="title">AccountName</span>, <span class="title">String</span>&gt; </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isValid</span><span class="params">(String accountName, ConstraintValidatorContext context)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> GeneralEmailValidator.valid(accountName) || PhoneValidator.valid(accountName);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="开启验证"><a href="#开启验证" class="headerlink" title="开启验证"></a>开启验证</h2><h4 id="Validated和-Valid"><a href="#Validated和-Valid" class="headerlink" title="@Validated和@Valid"></a>@Validated和@Valid</h4><p>@Validated是@Valid的变体<br>先说@Valid，它标记方法参数，方法返回值及其中的成员属性，并级联地进行验证，这意味着每当使用它标记一个参数时，参数中的各个属性都会被校验。<br>用下面代码举个🌰，当使用@Valid验证UserUpdateRequest作为方法参数时，会验证UserUpdateRequest中的name和address，然后级联验证Address中的province和city</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserUpdateRequest</span> </span>&#123;</span><br><span class="line">    <span class="meta">@NotBlank</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@NotNull</span></span><br><span class="line">    <span class="meta">@Valid</span> </span><br><span class="line">    <span class="keyword">private</span> Address address;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Address</span> </span>&#123;</span><br><span class="line">        <span class="meta">@NotBlank</span></span><br><span class="line">        <span class="keyword">private</span> String province;</span><br><span class="line">        </span><br><span class="line">        <span class="meta">@NotBlank</span></span><br><span class="line">        <span class="keyword">private</span> String city;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>再说@Validated，和@Valid使用上差不多，但有两点需要注意：</p>
+<ul>
+<li>不能用在成员属性上</li>
+<li>提供了一个分组功能，可以在入参验证时，根据不同的分组采用不同的验证机制</li>
+</ul>
+<h4 id="对RequestBody验证"><a href="#对RequestBody验证" class="headerlink" title="对RequestBody验证"></a>对RequestBody验证</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> UserCreateResponse <span class="title">createUser</span><span class="params">(<span class="meta">@RequestBody</span> <span class="meta">@Valid</span> UserCreateRequest request)</span></span>&#123;</span><br><span class="line">      <span class="comment">// xxxx</span></span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> UserCreateResponse <span class="title">createUser</span><span class="params">(<span class="meta">@RequestBody</span> <span class="meta">@Validated</span> UserCreateRequest request)</span></span>&#123;</span><br><span class="line">      <span class="comment">// xxxx</span></span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="对RequestParam验证"><a href="#对RequestParam验证" class="headerlink" title="对RequestParam验证"></a>对RequestParam验证</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Validated</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserManagementController</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Page&lt;QueryUserResponse&gt; <span class="title">query</span><span class="params">(<span class="meta">@RequestParam(required = false)</span> <span class="meta">@NotBlank</span> String keyword,</span></span></span><br><span class="line"><span class="params"><span class="function">                                         Pageable pageable)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// xxxx</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里有个有趣的地方，为什么不可以直接在方法参数上使用@Valid或@Validated，而是要在类上使用@Validated？ </p>
+<p>若直接在方法参数上使用@Valid或@Validated，那么会验证该参数的内部属性，而不会关心验证该参数被表示标识的验证。<br>而@Validated有个特别的地方，当被放在spring bean的类上，spring会为其创建一个切面代理，对于其所有的public方法，如果方法有声明需要验证的参数，则进行验证。<br>另外，@Validated也可以放到方法上，但没有创建切面的功能，仅仅是用来声明该方法所有的需要验证的参数适用的group，并覆盖类上提供的分组。  </p>
+<h2 id="捕获异常"><a href="#捕获异常" class="headerlink" title="捕获异常"></a>捕获异常</h2><p>最后，我们再收个尾，将数据校验抛出的异常进行捕获，返回给前端简单清晰够用的返回值即可。<br>异常response的返回格式与前端达成一致就好，这里提供一种简单的返回格式供参考</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ExceptionHandler(MethodArgumentNotValidException.class)</span></span><br><span class="line"><span class="keyword">public</span> ResponseEntity&lt;Map&lt;String, List&lt;String&gt;&gt;&gt;handleMethodArgumentNotValidException(MethodArgumentNotValidException e)&#123;</span><br><span class="line">        List&lt;String&gt; fieldErrors=e.getBindingResult().getFieldErrors().stream()</span><br><span class="line">        .map(fieldError-&gt;fieldError.getField()+<span class="string">&quot; &quot;</span>+fieldError.getDefaultMessage())</span><br><span class="line">        .collect(Collectors.toList());</span><br><span class="line"></span><br><span class="line">        Map&lt;String, List&lt;String&gt;&gt;map=<span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        map.put(<span class="string">&quot;errors&quot;</span>,fieldErrors);</span><br><span class="line">        <span class="keyword">return</span> ResponseEntity.status(HttpStatus.BAD_REQUEST).body(map);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@ExceptionHandler(ConstraintViolationException.class)</span></span><br><span class="line"><span class="keyword">public</span> ResponseEntity&lt;Map&lt;String, List&lt;String&gt;&gt;&gt; handleConstraintViolationException(ConstraintViolationException e) &#123;</span><br><span class="line">        List&lt;String&gt; errors = e.getConstraintViolations().stream()</span><br><span class="line">        .map(constraintViolation -&gt; constraintViolation.getPropertyPath() + constraintViolation.getMessage())</span><br><span class="line">        .collect(Collectors.toList());</span><br><span class="line"></span><br><span class="line">        Map&lt;String, List&lt;String&gt;&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        map.put(<span class="string">&quot;errors&quot;</span>, errors);</span><br><span class="line">        <span class="keyword">return</span> ResponseEntity.status(HttpStatus.BAD_REQUEST).body(map);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>  Theme <a target="_blank" rel="noopener" href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/js/index.js"></script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>
