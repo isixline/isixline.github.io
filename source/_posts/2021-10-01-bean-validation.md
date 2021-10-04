@@ -79,13 +79,58 @@ spring-boot-starter-validation是对hibernate-validation的二次封装， 而hi
 @Null // 所注解的元素值为null
 ```
 
+## 自定义验证注解
+这里举个🌰，@AccountName为验证为phone或者email格式
+```java
+@Documented
+@Constraint(validatedBy = AccountNameValidator.class)
+@Target({FIELD, PARAMETER})
+@Retention(RUNTIME)
+public @interface AccountName {
+    String message() default "Invalid account name";
+
+    Class[] groups() default {};
+
+    Class[] payload() default {};
+}
+```
+```java
+public class AccountNameValidator implements ConstraintValidator<AccountName, String> {
+    @Override
+    public boolean isValid(String accountName, ConstraintValidatorContext context) {
+        return GeneralEmailValidator.valid(accountName) || PhoneValidator.valid(accountName);
+    }
+}
+```
+
 ## 开启验证
-@Validated是@Valid的变体  
-@Validated：可以用在类型、方法和方法参数上。但是不能用在成员属性（字段）上  
-@Valid：可以用在方法、构造函数、方法参数和成员属性（字段）上  
+#### @Validated和@Valid
+@Validated是@Valid的变体    
+先说@Valid，它标记方法参数，方法返回值及其中的成员属性，并级联地进行验证，这意味着每当使用它标记一个参数时，参数中的各个属性都会被校验。  
+举个🌰，当使用@Valid验证UserUpdateRequest作为方法参数时，会验证UserUpdateRequest中的name和address，然后级联验证Address中的province和city
+```java
+public class UserUpdateRequest {
+    @NotBlank
+    private String name;
+
+    @NotNull
+    @Valid 
+    private Address address;
+
+    public static class Address {
+        @NotBlank
+        private String province;
+        
+        @NotBlank
+        private String city;
+    }
+}
+```
+再说@Validated，和@Valid使用上差不多，但有两点需要注意：
+- 不能用在成员属性上
+- 提供了一个分组功能，可以在入参验证时，根据不同的分组采用不同的验证机制
 
 #### 对RequestBody验证
-
 ```java
   public UserCreateResponse createUser(@RequestBody @Valid UserCreateRequest request){
         // xxxx
@@ -99,7 +144,6 @@ spring-boot-starter-validation是对hibernate-validation的二次封装， 而hi
 ```
 
 #### 对RequestParam验证
-
 ```java
 @Validated
 public class UserManagementController {
@@ -109,6 +153,10 @@ public class UserManagementController {
     }
 }
 ```
+这里就有个有趣的事情，为什么不可以直接在方法参数上使用@Valid或@Validated，而是要在类上使用@Validated？   
+若直接在方法参数上使用@Valid或@Validated，那么会验证该参数的内部属性，而不会关心验证该参数被表示标识的验证。    
+而@Validated有个特别的地方，当被放在spring bean的类上，spring会为其创建一个切面代理，对于其所有的public方法，如果方法有声明需要验证的参数，则进行验证。  
+另外，@Validated也可以放到方法上，但没有创建切面的功能，仅仅是用来声明该方法所有的需要验证的参数适用的group，并覆盖类上提供的分组。  
 
 ## 捕获异常
 
@@ -124,6 +172,17 @@ public ResponseEntity<Map<String, List<String>>>handleMethodArgumentNotValidExce
 
         Map<String, List<String>>map=new HashMap<>();
         map.put("errors",fieldErrors);
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(map);
+        }
+
+@ExceptionHandler(ConstraintViolationException.class)
+public ResponseEntity<Map<String, List<String>>> handleConstraintViolationException(ConstraintViolationException e) {
+        List<String> errors = e.getConstraintViolations().stream()
+        .map(constraintViolation -> constraintViolation.getPropertyPath() + constraintViolation.getMessage())
+        .collect(Collectors.toList());
+
+        Map<String, List<String>> map = new HashMap<>();
+        map.put("errors", errors);
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(map);
         }
 
