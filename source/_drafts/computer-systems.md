@@ -27,5 +27,3 @@ controller：applicationService作为数据，但其实就是applicationService�
 流水线本身就是一个缓存策略。
 
 权衡，性能与准确性，以及搞砸了付出的代价是否在可接受范围内。
-
-
